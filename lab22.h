@@ -62,8 +62,6 @@ void Unit::showStatus(){
 void Unit::newTurn(){
 	guard_on = false;
 }
-
-
 bool Unit::isDead(){
 	if (hp<=0)return true;
 	else return false;
@@ -84,7 +82,6 @@ int Unit::beAttacked(int oppatk){
 int Unit::attack(Unit &type){
 	return type.beAttacked(atk);
 }
-
 int Unit::heal(){
 	int recovery = rand()%21+10;
 	if(hp+recovery>hpmax){
@@ -93,7 +90,6 @@ int Unit::heal(){
 	hp = hp+recovery;
 	return recovery;
 }
-
 
 
 void drawScene(char p_action,int p,char m_action,int m){
